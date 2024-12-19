@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-color: #111827;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto,'sans-serif';
+}
+
+#head {
+    height: 20vh;
+    background-color: aquamarine;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#score-board {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr repeat(2,2fr);
+}
+
+#score-board * {
+    justify-self: center;
+    height: min-content;
+}
+
+.name {
+    align-self: center;
+    font-size: 1.3rem;
+}
+
+#score-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    align-self: self-end;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+#player1-name,
+#player1-score{
+    grid-column: 1/2;
+}
+
+#player2-name,
+#player2-score {
+    grid-column: 3/4;
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+#board-container {
+    background-color: transparent;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#board {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.cell  {
+    background-color: white;
+    height: 8rem;
+    width: 8rem;
+    font-size: 8.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

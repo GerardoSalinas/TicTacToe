@@ -73,7 +73,6 @@ main {
 }
 
 #board {
-    background-color: red;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
@@ -89,4 +88,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#restart-btn {
+    position: absolute;
+    right: 20%;
+    top: 55%;
+    font-size: 1.5rem;
 }
